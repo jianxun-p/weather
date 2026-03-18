@@ -1,0 +1,19 @@
+# VCS and editor files
+.git
+.gitignore
+.vscode
+
+# Dependency and build outputs
+**/node_modules
+**/dist
+
+# Logs and env files
+**/*.log
+**/.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Runtime data (can be mounted as a volume)
+Server/data/*.db

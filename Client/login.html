@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Login</title>
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-panel" aria-labelledby="loginHeading">
+        <p class="auth-kicker">Weather access</p>
+        <h1 id="loginHeading">Sign in to continue</h1>
+        <p>Use any username and password. New usernames are registered automatically.</p>
+
+        <form class="auth-form" id="loginForm">
+          <label for="usernameInput">Username</label>
+          <input
+            id="usernameInput"
+            type="text"
+            autoComplete="username"
+            placeholder="e.g. stormchaser"
+            required
+          />
+
+          <label for="passwordInput">Password</label>
+          <input
+            id="passwordInput"
+            type="password"
+            autoComplete="current-password"
+            placeholder="Your password"
+            required
+          />
+
+          <button id="signInBtn" type="submit">Sign in</button>
+        </form>
+
+        <p id="loginError" class="error" hidden></p>
+      </section>
+    </main>
+
+    <script type="module" src="/src/login.js"></script>
+  </body>
+</html>
