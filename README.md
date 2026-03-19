@@ -17,7 +17,7 @@ Full-stack weather application with:
 - npm
 - Docker (optional)
 
-## Run (Docker)
+## Run with Docker (Recommended)
 
 1. Build the image
 
@@ -27,21 +27,20 @@ docker build -t weather-app:latest .
 
 2. Start a container
 
-```bash
-docker run --rm -p 4000:4000 -v weather-data:/app/Server/data weather-app:latest
-```
-
-For admin exports, set an export password:
+Start a new terminal and run:
 
 ```bash
-docker run --rm -p 4000:4000 --env-file Server/.env -v weather-data:/app/Server/data weather-app:latest
+echo 'EXPORT_PASSWORD=CHANGE_ME' > Server/.env
+docker run -p 4000:4000 --env-file Server/.env -v weather-data:/app/Server/data weather-app:latest
 ```
 
-## Run (Manual)
+## Run locally
 
 Run frontend and backend in separate terminals.
 
 1. Start the server
+
+Start a new terminal and run:
 
 ```bash
 cd Server
@@ -52,6 +51,8 @@ npm run dev
 Server runs on `http://localhost:4000`.
 
 2. Build the client
+
+Start a new terminal and run:
 
 ```bash
 cd Client

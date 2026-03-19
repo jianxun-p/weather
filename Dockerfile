@@ -12,7 +12,7 @@ FROM node:alpine AS server-deps
 WORKDIR /app/Server
 
 COPY Server/package*.json ./
-RUN npm ci --omit=dev
+RUN npm install
 
 
 FROM node:alpine AS runtime
